@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.1.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_1_0.dtd">
+<hook>
+    <!-- Spring Security Filter Definition -->
+    <servlet-filter>
+        <servlet-filter-name>springSecurityFilterChain</servlet-filter-name>
+        <servlet-filter-impl>org.springframework.web.filter.DelegatingFilterProxy</servlet-filter-impl>
+    </servlet-filter>
+    <servlet-filter-mapping>
+        <servlet-filter-name>springSecurityFilterChain</servlet-filter-name>
+        <url-pattern>/saml/*</url-pattern>
+    </servlet-filter-mapping>
+</hook>
